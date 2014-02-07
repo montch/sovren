@@ -28,7 +28,7 @@ describe Sovren::Resume do
     Then { result.objective.length == 84 }
     Then { result.contact_information.should_not be_nil }
     Then { result.education_history.length == 2 }
-    Then { result.employment_history.length == 3 }
+    Then { result.employment_history.length == 4 }
     Then { result.competencies.length == 54 }
     Then { result.achievements.length == 1 }
     Then { result.associations.length == 1 }
