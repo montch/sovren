@@ -30,6 +30,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec-given"
   spec.add_development_dependency "vcr"
   spec.add_development_dependency "webmock", '< 1.10'
+  spec.add_development_dependency 'simplecov'
 
   spec.requirements << "Access to a sovren resume parser server."
 end

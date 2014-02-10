@@ -29,4 +29,7 @@ module Sovren
   require_relative "sovren/patent"
   require_relative "sovren/publication"
   require_relative "sovren/reference"
+  require_relative "sovren/nonxmlresume"
+  require_relative "sovren/userarea"
+
 end
