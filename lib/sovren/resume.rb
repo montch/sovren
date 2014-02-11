@@ -25,6 +25,5 @@ module Sovren
       resume.user_area =   UserArea.parse(parsed_resume.css('UserArea'))
       resume
     end
-
   end
 end

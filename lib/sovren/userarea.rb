@@ -6,13 +6,13 @@ module Sovren
       return Array.new if user_area.nil?
       result = user_area.css('sov|ResumeUserArea').collect do |item|
         r = UserArea.new
-        r.language = item.css('sov|Culture sov|Language').text
-        r.country = item.css('sov|Culture sov|Country').text
-        r.description = item.css('sov|ExperienceSummary sov|Description').text
-        r.months_worked = item.css('sov|ExperienceSummary sov|MonthsOfWorkExperience').text
-        r.fit_percentage = item.css('sov|ExperienceSummary sov|BestFitTaxonomies sov|BestFitTaxonomy').first.attribute('percentOfOverall').text
-        r.best_fit = item.css('sov|ExperienceSummary sov|BestFitTaxonomies sov|BestFitTaxonomy').first.attribute('name').text
-        r.parse_time = item.css('sov|ParseTime').text
+        r.language = item.css('sov|Culture sov|Language').text rescue nil
+        r.country = item.css('sov|Culture sov|Country').text rescue nil
+        r.description = item.css('sov|ExperienceSummary sov|Description').text rescue nil
+        r.months_worked = item.css('sov|ExperienceSummary sov|MonthsOfWorkExperience').text rescue nil
+        r.fit_percentage = item.css('sov|ExperienceSummary sov|BestFitTaxonomies sov|BestFitTaxonomy').first.attribute('percentOfOverall').text rescue nil
+        r.best_fit = item.css('sov|ExperienceSummary sov|BestFitTaxonomies sov|BestFitTaxonomy').first.attribute('name').text rescue nil
+        r.parse_time = item.css('sov|ParseTime').text rescue nil
         r
       end
       result
